@@ -10,6 +10,7 @@ namespace GameCore.Repository
         [SerializeField] private Button.CustomButtonRepository _customButtonRepository;
         [SerializeField] private View.UI.Game.VictoryScreen _victoryScreen;
         [SerializeField] private View.UI.Game.LoseScreen _loseScreen;
+        [SerializeField] private View.UI.Game.TutorialScreen _tutorialScreen;
 
         private Pet.Pet _tamagotchi;
         private Coin.CoinSpawner _coinSpawner;
@@ -35,8 +36,16 @@ namespace GameCore.Repository
             _coinSpawner = _customButtonRepository.GetTamagotchiImage()
                 .GetComponent<Coin.CoinSpawner>();
 
-            _gameScreen.StartScreen();
             InitButtonListeners();
+
+            if (_selectedLevelIndex == 0)
+            {
+                ShowTutorial();
+            }
+            else
+            {
+                _gameScreen.StartScreen();
+            }
         }
 
         private void OnDestroy()
@@ -56,6 +65,19 @@ namespace GameCore.Repository
 
             _view.UpdateUI(_tamagotchi,
                 _totalCoins + _coinSpawner.CoinCounter);
+        }
+
+        private void ShowTutorial()
+        {
+            _isGameOver = true;
+            _tutorialScreen.Show(OnTutorialComplete);
+        }
+
+        public void OnTutorialComplete()
+        {
+            _tutorialScreen.CloseScreen();
+            _gameScreen.StartScreen();
+            _isGameOver = false;
         }
 
         private void HandleLevelUp()
