@@ -2530,7 +2530,7 @@ GameObject:
   - component: {fileID: 547650060}
   - component: {fileID: 547650059}
   m_Layer: 0
-  m_Name: Achivments
+  m_Name: Achievements
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7846,7 +7846,7 @@ MonoBehaviour:
   _levelsScreen: {fileID: 358889874198061137}
   _shopScreen: {fileID: 232378517042155709}
   _leaderboardScreen: {fileID: 7470692468633626346}
-  _achievementsScreen: {fileID: 0}
+  _achievementsScreen: {fileID: 1060316343}
   _sceneLoader: {fileID: 152519173}
   _startGame: {fileID: 7216980912326151940}
   _settings: {fileID: 7216980913602211547}
@@ -7854,7 +7854,7 @@ MonoBehaviour:
   _levels: {fileID: 7216980913776153316}
   _shop: {fileID: 1291091834}
   _leaderboard: {fileID: 363711840}
-  _achievements: {fileID: 0}
+  _achievements: {fileID: 547650059}
 --- !u!1 &1827945371
 GameObject:
   m_ObjectHideFlags: 0
