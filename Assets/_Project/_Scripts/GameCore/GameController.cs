@@ -1,3 +1,4 @@
+using GameCore.Achievements;
 using UnityEngine;
 
 namespace GameCore.Repository
@@ -90,6 +91,10 @@ namespace GameCore.Repository
             int bestScore = SaveBestScore(sessionCoins);
             UnlockNextLevel();
 
+            // Check achievements after level up and coin commit
+            AchievementManager.CheckLevelAchievement();
+            AchievementManager.CheckGoldAchievement();
+
             _victoryScreen.Show(sessionCoins, bestScore, HandleVictoryRestart);
         }
 
@@ -108,6 +113,9 @@ namespace GameCore.Repository
             CommitCoins(sessionCoins);
 
             int bestScore = SaveBestScore(sessionCoins);
+
+            // Check gold achievement after coin commit
+            AchievementManager.CheckGoldAchievement();
 
             _loseScreen.Show(sessionCoins, bestScore, HandleLoseRestart);
         }

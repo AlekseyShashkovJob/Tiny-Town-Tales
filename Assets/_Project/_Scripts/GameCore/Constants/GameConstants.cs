@@ -11,5 +11,11 @@ namespace GameCore.Constants
         public const string SKIN_PURCHASED_PREFIX = "Skin_Purchased_";
         public const string SKIN_SELECTED_KEY = "Skin_Selected";
         public const string DEFAULT_SKIN_ID = "city_default";
+
+        // Achievements
+        public const string ACHIEVEMENT_PREFIX = "Achievement_";
+        public const string ACHIEVEMENT_LEVEL_5 = "ReachLevel5";
+        public const string ACHIEVEMENT_BILLION_GOLD = "BillionGold";
+        public const string ACHIEVEMENT_4_SKINS = "FourSkins";
     }
 }

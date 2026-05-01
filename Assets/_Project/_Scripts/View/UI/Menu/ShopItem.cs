@@ -1,9 +1,10 @@
-using System;
-using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+using GameCore.Achievements;
 using GameCore.Constants;
 using GameCore.Shop;
+using System;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 using View.Button;
 
 namespace View.UI.Menu
@@ -85,6 +86,9 @@ namespace View.UI.Menu
 
             OnPurchased?.Invoke(this);
 
+            // Check skins achievement after purchase
+            AchievementManager.CheckSkinsAchievement();
+
             Select();
         }
 
@@ -119,4 +123,3 @@ namespace View.UI.Menu
         }
     }
 }
-

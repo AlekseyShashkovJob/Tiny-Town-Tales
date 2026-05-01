@@ -9,6 +9,8 @@ namespace View.UI.Menu
         [SerializeField] private UIScreen _privacyScreen;
         [SerializeField] private UIScreen _levelsScreen;
         [SerializeField] private UIScreen _shopScreen;
+        [SerializeField] private UIScreen _leaderboardScreen;
+        [SerializeField] private UIScreen _achivmentsScreen;
 
         [SerializeField] private Misc.SceneManagment.SceneLoader _sceneLoader;
 
@@ -18,6 +20,8 @@ namespace View.UI.Menu
         [SerializeField] private CustomButton _privacy;
         [SerializeField] private CustomButton _levels;
         [SerializeField] private CustomButton _shop;
+        [SerializeField] private CustomButton _leaderboard;
+        [SerializeField] private CustomButton _achivments;
 
         private void OnEnable()
         {
@@ -26,6 +30,8 @@ namespace View.UI.Menu
             _privacy.AddListener(OpenPrivacy);
             _levels.AddListener(OpenLevels);
             _shop.AddListener(OpenShop);
+            _leaderboard.AddListener(OpenLeaderboard);
+            _achivments.AddListener(OpenAchivments);
         }
 
         private void OnDisable()
@@ -35,6 +41,8 @@ namespace View.UI.Menu
             _privacy.RemoveListener(OpenPrivacy);
             _levels.RemoveListener(OpenLevels);
             _shop.RemoveListener(OpenShop);
+            _leaderboard.RemoveListener(OpenLeaderboard);
+            _achivments.RemoveListener(OpenAchivments);
         }
 
         public override void StartScreen()
@@ -59,5 +67,7 @@ namespace View.UI.Menu
         private void OpenPrivacy() => _privacyScreen.StartScreen();
         private void OpenLevels() => _levelsScreen.StartScreen();
         private void OpenShop() => _shopScreen.StartScreen();
+        private void OpenLeaderboard() => _leaderboardScreen.StartScreen();
+        private void OpenAchivments() => _achivmentsScreen.StartScreen();
     }
 }
