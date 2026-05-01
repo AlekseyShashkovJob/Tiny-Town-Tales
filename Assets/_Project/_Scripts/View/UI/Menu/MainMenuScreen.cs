@@ -10,7 +10,7 @@ namespace View.UI.Menu
         [SerializeField] private UIScreen _levelsScreen;
         [SerializeField] private UIScreen _shopScreen;
         [SerializeField] private UIScreen _leaderboardScreen;
-        [SerializeField] private UIScreen _achivmentsScreen;
+        [SerializeField] private UIScreen _achievementsScreen;
 
         [SerializeField] private Misc.SceneManagment.SceneLoader _sceneLoader;
 
@@ -21,7 +21,7 @@ namespace View.UI.Menu
         [SerializeField] private CustomButton _levels;
         [SerializeField] private CustomButton _shop;
         [SerializeField] private CustomButton _leaderboard;
-        [SerializeField] private CustomButton _achivments;
+        [SerializeField] private CustomButton _achievements;
 
         private void OnEnable()
         {
@@ -31,7 +31,7 @@ namespace View.UI.Menu
             _levels.AddListener(OpenLevels);
             _shop.AddListener(OpenShop);
             _leaderboard.AddListener(OpenLeaderboard);
-            _achivments.AddListener(OpenAchivments);
+            _achievements.AddListener(OpenAchievements);
         }
 
         private void OnDisable()
@@ -42,7 +42,7 @@ namespace View.UI.Menu
             _levels.RemoveListener(OpenLevels);
             _shop.RemoveListener(OpenShop);
             _leaderboard.RemoveListener(OpenLeaderboard);
-            _achivments.RemoveListener(OpenAchivments);
+            _achievements.RemoveListener(OpenAchievements);
         }
 
         public override void StartScreen()
@@ -68,6 +68,6 @@ namespace View.UI.Menu
         private void OpenLevels() => _levelsScreen.StartScreen();
         private void OpenShop() => _shopScreen.StartScreen();
         private void OpenLeaderboard() => _leaderboardScreen.StartScreen();
-        private void OpenAchivments() => _achivmentsScreen.StartScreen();
+        private void OpenAchievements() => _achievementsScreen.StartScreen();
     }
 }

@@ -4,7 +4,7 @@ using View.Button;
 
 namespace View.UI.Menu
 {
-    public class AchivmentsScreen : UIScreen
+    public class AchievementsScreen : UIScreen
     {
         [SerializeField] private CustomButton _back;
         [SerializeField] private AchievementItem[] _achievementItems;
