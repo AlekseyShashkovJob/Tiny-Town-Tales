@@ -13,5 +13,11 @@ MonoBehaviour:
   m_Name: City_6
   m_EditorClassIdentifier: Assembly-CSharp::GameCore.Shop.SkinData
   <SkinId>k__BackingField: city_6
+  <SkinName>k__BackingField: Washington D.C.
   <Price>k__BackingField: 990000
   <PetSprite>k__BackingField: {fileID: 21300000, guid: 6f7b7d6f283604b4a88840faab62975e, type: 3}
+  <StoryText>k__BackingField: The marble heart of a nation. Grand monuments line
+    the National Mall, each one telling a story of courage and vision. The cherry
+    blossoms bloom every spring as if reminding everyone that beauty and power can
+    coexist.
+  <IngotColor>k__BackingField: {r: 0.68235296, g: 0.6784314, b: 0.6784314, a: 1}

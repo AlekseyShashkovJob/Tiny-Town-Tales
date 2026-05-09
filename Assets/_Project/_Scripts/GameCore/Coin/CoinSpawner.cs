@@ -49,3 +49,4 @@ namespace GameCore.Coin
         }
     }
 }
+

@@ -11,6 +11,7 @@ namespace View.UI.Menu
         [SerializeField] private TMP_Text _coinsText;
         [SerializeField] private ShopItem[] _shopItems;
         [SerializeField] private PetSkinManager _petSkinManager;
+        [SerializeField] private SkinStoryScreen _skinStoryScreen; // <-- НОВОЕ
 
         private void OnEnable()
         {
@@ -64,18 +65,30 @@ namespace View.UI.Menu
         private void HandlePurchased(ShopItem purchasedItem)
         {
             RefreshCoinsDisplay();
+
+            // Показываем историю города после покупки
+            if (_skinStoryScreen != null)
+            {
+                _skinStoryScreen.ShowSkinStory(purchasedItem.SkinData, () =>
+                {
+                    // После закрытия окна истории — выбираем скин
+                    purchasedItem.Select();
+                });
+            }
+            else
+            {
+                purchasedItem.Select();
+            }
         }
 
         private void HandleSelected(ShopItem selectedItem)
         {
-            // Deselect every other item
             foreach (ShopItem item in _shopItems)
             {
                 if (item != selectedItem)
                     item.Deselect();
             }
 
-            // Apply skin to pet
             if (_petSkinManager != null)
                 _petSkinManager.ApplySkin(selectedItem.SkinData);
         }

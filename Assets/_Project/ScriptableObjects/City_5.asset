@@ -13,5 +13,11 @@ MonoBehaviour:
   m_Name: City_5
   m_EditorClassIdentifier: Assembly-CSharp::GameCore.Shop.SkinData
   <SkinId>k__BackingField: city_5
+  <SkinName>k__BackingField: Paris
   <Price>k__BackingField: 780000
   <PetSprite>k__BackingField: {fileID: 21300000, guid: 8927f1605cb2e1147bc3f0c27bf6e8f8, type: 3}
+  <StoryText>k__BackingField: "Ah, la Ville Lumi\xE8re! From the iron lacework of
+    the Eiffel Tower to the aroma of fresh croissants drifting through Montmartre,
+    this city has inspired artists, poets, and dreamers for centuries. Love is always
+    in the air."
+  <IngotColor>k__BackingField: {r: 1, g: 0.7137255, b: 0.75686276, a: 1}

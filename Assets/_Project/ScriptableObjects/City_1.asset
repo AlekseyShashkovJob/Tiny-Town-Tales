@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: City_1
   m_EditorClassIdentifier: Assembly-CSharp::GameCore.Shop.SkinData
   <SkinId>k__BackingField: city_default
+  <SkinName>k__BackingField: Default Town
   <Price>k__BackingField: 0
   <PetSprite>k__BackingField: {fileID: 21300000, guid: 80aba103561c1884695b2dde0ef8fd26, type: 3}
+  <StoryText>k__BackingField: A quiet little settlement on a floating island. Nobody
+    knows how it got here, but the residents love their peaceful life among the clouds.
+    Every morning starts with fresh bread and the sound of birds.
+  <IngotColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}

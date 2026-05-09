@@ -35,7 +35,6 @@ namespace View.UI.Menu
         public bool IsPurchased { get; private set; }
         public bool IsSelected { get; private set; }
 
-
         public void Initialise()
         {
             IsPurchased = PlayerPrefs.GetInt(
@@ -86,10 +85,9 @@ namespace View.UI.Menu
 
             OnPurchased?.Invoke(this);
 
-            // Check skins achievement after purchase
             AchievementManager.CheckSkinsAchievement();
 
-            Select();
+            // Select() убран отсюда Ч теперь вызываетс€ после закрыти€ SkinStoryScreen
         }
 
         public void Select()
@@ -114,9 +112,7 @@ namespace View.UI.Menu
         private void RefreshVisuals()
         {
             _priceText.text = IsPurchased ? "0" : _skinData.Price.ToString();
-
             _buttonImage.sprite = IsPurchased ? _boughtSprite : _buySprite;
-
             _backgroundImage.sprite = IsSelected
                 ? _selectedBackground
                 : _defaultBackground;

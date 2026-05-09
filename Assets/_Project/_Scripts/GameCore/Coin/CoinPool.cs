@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace GameCore.Coin
 {
@@ -9,6 +10,7 @@ namespace GameCore.Coin
         [SerializeField] private GameObject _coinPrefab;
 
         private Queue<GameObject> _coinPool;
+        private Color _coinColor = Color.white;
 
         private void Awake()
         {
@@ -22,11 +24,22 @@ namespace GameCore.Coin
             }
         }
 
+        public void SetCoinColor(Color color)
+        {
+            _coinColor = color;
+        }
+
         public GameObject GetCoin()
         {
-            GameObject coin = _coinPool.Count > 0 ? _coinPool.Dequeue()
+            GameObject coin = _coinPool.Count > 0
+                ? _coinPool.Dequeue()
                 : Instantiate(_coinPrefab);
+
             coin.SetActive(true);
+
+            Image coinImage = coin.GetComponent<Image>();
+            if (coinImage != null)
+                coinImage.color = _coinColor;
 
             return coin;
         }

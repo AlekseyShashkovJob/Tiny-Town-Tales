@@ -13,5 +13,11 @@ MonoBehaviour:
   m_Name: City_2
   m_EditorClassIdentifier: Assembly-CSharp::GameCore.Shop.SkinData
   <SkinId>k__BackingField: city_2
+  <SkinName>k__BackingField: European Tram District
   <Price>k__BackingField: 250000
   <PetSprite>k__BackingField: {fileID: 21300000, guid: b1bbb65644b04074899de11928feda4e, type: 3}
+  <StoryText>k__BackingField: Once a sleepy crossroads, this town transformed when
+    the first tram line was built in 1887. Now cobblestone streets echo with the
+    cheerful clang of bells as colorful trams weave between cozy cafes and flower
+    shops.
+  <IngotColor>k__BackingField: {r: 0.7529412, g: 0.627451, b: 0.3764706, a: 1}
